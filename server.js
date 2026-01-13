@@ -1,8 +1,12 @@
 const express=require("express")
 const app=express()
+const multer=require("multer")
+const upload=multer()
 const path=require("path")
+const apiController=require("./controller/apiController")
 app.use(express.json())
 app.use(express.static(path.join(__dirname),{index:false}))
+app.post("/apiFetch",upload.none(),apiController)
 app.get("/",(req,res)=>{
     req.sendFile(path.join(__dirname),"/index.html")
 })

@@ -17,19 +17,19 @@
 
         <div class="p-8 space-y-6">
             
-            <form>
+            <form id="formDatas">
                 <div>
                     <label class="block text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Core Skills & Expertise</label>
                     <div class="flex gap-2 mb-4">
-                        <input type="text" name="skill" placeholder="e.g. System Design, Automation, Python" 
+                        <input id="skillType" type="text" placeholder="e.g. System Design, Automation, Python" 
                             class="flex-1 px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-slate-50">
-                        <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all whitespace-nowrap">
+                        <button id="addSkillBtn" type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all whitespace-nowrap">
                             Add Skill
                         </button>
                     </div>
                     
-                    <div class="flex flex-wrap gap-2 min-h-[50px] p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200">
-                        <span class="text-slate-400 text-sm italic">Input skills to see them listed here...</span>
+                    <div id="skillContainer" name="skill" class="flex flex-wrap gap-2 min-h-[50px] p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200">
+                        
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@
                 </div>
                 
                 <div class="mt-6">
-                    <button type="submit" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-2">
+                    <button id="generateBtn" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-2">
                         Generate Optimized Bio <i class="fa-solid fa-wand-magic-sparkles"></i>
                     </button>
                 </div>
@@ -82,6 +82,6 @@
             </p>
         </footer>
     </div>
-
+<script type="module" src="script.js"></script>
 </body>
 </html>
