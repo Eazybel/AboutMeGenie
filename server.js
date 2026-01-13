@@ -15,7 +15,8 @@ app.post("/apiFetch", upload.none(), apiController);
 
 // Root route
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+ res.sendFile(path.join(__dirname, "public", "index.html"));
+
 });
 
 // Use Render's PORT environment variable
