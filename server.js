@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname,"/public"),{index:false}))
 app.post("/apiFetch",upload.none(),apiController)
 app.get("/",(req,res)=>{
-    req.sendFile(path.join(__dirname),"/index.html")
+    res.sendFile(path.join(__dirname),"/index.html")
 })
 app.listen(5000,()=>{
     console.log("server running")
