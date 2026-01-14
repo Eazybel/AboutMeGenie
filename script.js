@@ -10,6 +10,7 @@ addSkillBtn.onclick=()=>{
     skillType.value=""
    
 }
+// Webhook redirecting starts from here
 generateBtn.onclick=(e)=>{
     e.preventDefault()
     form.append("skills",skillContainer.innerText)
