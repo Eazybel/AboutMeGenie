@@ -1,4 +1,4 @@
 const apiFetch=((req,res)=>{
-res.send("sucess")
+res.send(req.body)
 })
 module.exports=apiFetch
