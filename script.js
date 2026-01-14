@@ -13,7 +13,7 @@ addSkillBtn.onclick=()=>{
 generateBtn.onclick=(e)=>{
     e.preventDefault()
     form.append("skills",skillContainer.innerText)
-     fetch("/apiFetch",{
+     fetch("https://n8n-7hzw.onrender.com/webhook-test/90b85d01-d2c6-4963-a71a-396c7372edb2",{
         method:"POST",
         header:{"Content-type":"application/json"},
         body:form
