@@ -6,6 +6,7 @@ const generateBtn=document.getElementById("generateBtn")
 const platform=document.getElementById("platform")
 const tonality=document.getElementById("tonality")
 const formDatas=document.getElementById("formDatas")
+const loadingSpinner=document.getElementById("loadingSpinner")
 const copyBtn = document.getElementById("copyBtn");
 const resultTextarea = document.getElementById("resultTextarea");
 const copyStatus = document.getElementById("copyStatus");
@@ -19,6 +20,7 @@ addSkillBtn.onclick=()=>{
 }
 // Webhook redirecting starts from here
 generateBtn.onclick=async(e)=>{
+    loadingSpinner.classList.remove("hidden")
     e.preventDefault()
     const payload = {
         skills: skillContainer.innerText,
@@ -34,36 +36,8 @@ generateBtn.onclick=async(e)=>{
 .then(res=>{
     return res.text()
 }).then(data=>{
-    console.log(data)
+   resultTextarea.innerText=data
+    loadingSpinner.classList.add("hidden")
 })
 
 }
-
-
-copyBtn.onclick = async () => {
-    const textToCopy = resultTextarea.value;
-
-    if (!textToCopy) {
-        alert("Nothing to copy yet!");
-        return;
-    }
-
-    try {
-        await navigator.clipboard.writeText(textToCopy);
-        
-        // Visual Feedback
-        copyStatus.innerText = "Copied!";
-        copyBtn.classList.add("bg-green-500", "text-white", "border-green-600");
-        copyBtn.classList.remove("text-slate-500");
-
-        // Reset button after 2 seconds
-        setTimeout(() => {
-            copyStatus.innerText = "Copy";
-            copyBtn.classList.remove("bg-green-500", "text-white", "border-green-600");
-            copyBtn.classList.add("text-slate-500");
-        }, 2000);
-        
-    } catch (err) {
-        console.error("Failed to copy: ", err);
-    }
-};
