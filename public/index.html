@@ -7,36 +7,36 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen flex flex-col items-center justify-center p-6 font-sans">
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 font-sans">
 
-    <div class="w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-white overflow-hidden">
-        <div class="bg-blue-600 p-8 text-white text-center">
-            <h1 class="text-3xl font-extrabold tracking-tight italic">aboutmeGenie</h1>
-            <p class="text-blue-100 text-sm mt-2 opacity-90">Part of the AI-Driven Interview Automation Suite</p>
+    <div class="w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-white overflow-hidden my-4">
+        
+        <div class="bg-blue-600 p-6 sm:p-8 text-white text-center">
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight italic">aboutmeGenie</h1>
+            <p class="text-blue-100 text-xs sm:text-sm mt-2 opacity-90">Part of the AI-Driven Interview Automation Suite</p>
         </div>
 
-        <div class="p-8 space-y-6">
+        <div class="p-5 sm:p-8 space-y-6">
             
             <form id="formDatas">
                 <div>
-                    <label class="block text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Core Skills & Expertise</label>
-                    <div class="flex gap-2 mb-4">
+                    <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Core Skills & Expertise</label>
+                    <div class="flex flex-col sm:flex-row gap-2 mb-4">
                         <input id="skillType" type="text" placeholder="e.g. System Design, Automation, Python" 
-                            class="flex-1 px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-slate-50">
-                        <button id="addSkillBtn" type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all whitespace-nowrap">
+                            class="flex-1 px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-slate-50 text-sm">
+                        <button id="addSkillBtn" type="button" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all whitespace-nowrap text-sm">
                             Add Skill
                         </button>
                     </div>
                     
-                    <div id="skillContainer" name="skill" class="flex flex-wrap gap-2 min-h-[50px] p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200">
-                        
-                    </div>
+                    <div id="skillContainer" name="skill" class="flex flex-wrap gap-2 min-h-[50px] p-3 sm:p-4 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200">
+                        </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                     <div>
-                        <label class="block text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Target Platform</label>
-                        <select id="platform" name="platform" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none">
+                        <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Target Platform</label>
+                        <select id="platform" name="platform" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm">
                             <option value="linkedin">LinkedIn (Professional)</option>
                             <option value="github">GitHub (Technical/Dev)</option>
                             <option value="upwork">Upwork (Freelance/Sales)</option>
@@ -46,8 +46,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Desired Tonality</label>
-                        <select id="tonality" name="tonality" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none">
+                        <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Desired Tonality</label>
+                        <select id="tonality" name="tonality" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm">
                             <option value="professional">Corporate Professional</option>
                             <option value="branding">Personal Branding</option>
                             <option value="funny">Funny & Relatable</option>
@@ -58,32 +58,32 @@
                 </div>
                 
                 <div class="mt-6">
-                    <button id="generateBtn" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-3 group">
-                    <span id="btnText">Generate Optimized Bio</span>
+                    <button id="generateBtn" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-3 group text-sm sm:text-base">
+                        <span id="btnText">Generate Optimized Bio</span>
 
-                    <div id="loadingSpinner" class="hidden flex items-center gap-1">
-                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                        <div class="w-2 h-2 bg-blue-300 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                        <div class="w-2 h-2 bg-white rounded-full animate-bounce"></div>
-                    </div>
+                        <div id="loadingSpinner" class="hidden flex items-center gap-1">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                            <div class="w-2 h-2 bg-blue-300 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                            <div class="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+                        </div>
 
-                    <i id="magicIcon" class="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i>
-                </button>
+                        <i id="magicIcon" class="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i>
+                    </button>
                 </div>
             </form>
 
             <div class="relative">
-                <label class="block text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">The Magic Result</label>
-                <textarea id="resultTextarea" rows="4" readonly class="w-full px-4 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl text-slate-700 focus:outline-none placeholder:text-slate-400" 
+                <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">The Magic Result</label>
+                <textarea id="resultTextarea" rows="4" readonly class="w-full px-4 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl text-slate-700 focus:outline-none placeholder:text-slate-400 text-sm" 
                     placeholder="The AI will generate your content based on the platform and tone..."></textarea>
             </div>
         </div>
 
-        <footer class="bg-slate-900 p-8 text-center">
+        <footer class="bg-slate-900 p-6 sm:p-8 text-center">
             <div class="inline-block bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1 mb-4">
-                <span class="text-blue-400 text-xs font-bold tracking-widest uppercase">Project Milestone: Level One</span>
+                <span class="text-blue-400 text-[10px] font-bold tracking-widest uppercase">Project Milestone: Level One</span>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed max-w-md mx-auto">
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-md mx-auto">
                 <strong class="text-white">To Recruiters:</strong> This interface is a key module of my 
                 <span class="text-blue-400">Automated Interview Process</span> project. It demonstrates advanced form handling, 
                 responsive UI design, and platform-specific content logic for AI integration.
@@ -92,4 +92,4 @@
     </div>
 <script type="module" src="script.js"></script>
 </body>
-</html>
+                        </html>
