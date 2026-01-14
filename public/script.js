@@ -28,7 +28,7 @@ generateBtn.onclick=async(e)=>{
         tonality: tonality.value 
     };
     form.append("skills",skillContainer.innerText)
-   await  fetch("https://n8n-7hzw.onrender.com/webhook-test/08af61a3-6845-4f01-bfff-4d91a5b92dfb",{
+   await  fetch("https://n8n-7hzw.onrender.com/webhook/08af61a3-6845-4f01-bfff-4d91a5b92dfb",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify(payload)
