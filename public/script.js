@@ -33,6 +33,7 @@ formDatas.onsubmit = async (e) => {
         const data = await res.text(); // get raw response text
         
         // Show result securely inside textarea
+        resultTextarea.value = ""; 
         resultTextarea.value = data; 
         
     } catch (error) {
