@@ -19,71 +19,78 @@
         <div class="p-5 sm:p-8 space-y-6">
             
             <form id="formDatas">
-    <div>
-        <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">
-            About You (In your own words)
-        </label>
-        <div class="flex flex-col gap-2 mb-4">
-            <textarea id="userAboutText" rows="5" placeholder="Share your story, experience, what you build, or your core expertise here... The AI will use this raw data as its exclusive source of truth." 
-                class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-slate-50 text-sm resize-none"></textarea>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <div>
-            <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Target Platform</label>
-            <div class="relative">
-                <select id="platform" name="platform" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm pr-10">
-                    <option value="linkedin">LinkedIn (Professional Profile)</option>
-                    <option value="github">GitHub (Technical Developer Readme/Bio)</option>
-                    <option value="upwork">Upwork (Freelance Profile Bio)</option>
-                    <option value="x">X / Twitter (Concise & Punchy)</option>
-                    <option value="instagram">Instagram (Creative Hub)</option>
-                    <option value="threads">Threads (Conversational/Casual)</option>
-                    <option value="youtube">YouTube (Channel About Section)</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
-                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                <div>
+                    <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">
+                        About You (In your own words)
+                    </label>
+                    <div class="flex flex-col gap-2 mb-4">
+                        <textarea id="userAboutText" rows="5" placeholder="Share your story, experience, what you build, or your core expertise here... The AI will use this raw data as its exclusive source of truth." 
+                            class="w-full px-4 py-3 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all bg-slate-50 text-sm resize-none"></textarea>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div>
-            <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Desired Tonality</label>
-            <div class="relative">
-                <select id="tonality" name="tonality" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm pr-10">
-                    <option value="professional">Corporate Professional</option>
-                    <option value="branding">Personal Branding (Confident/Authority)</option>
-                    <option value="tech-witty">Tech-Witty & Smart</option>
-                    <option value="funny">Funny & Relatable</option>
-                    <option value="minimalist">Ultra Minimalist</option>
-                    <option value="bold">Bold & Disruptive</option>
-                    <option value="storyteller">Narrative Storyteller</option>
-                </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
-                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                    <div>
+                        <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Target Platform</label>
+                        <div class="relative">
+                            <select id="platform" name="platform" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm pr-10">
+                                <option value="linkedin">LinkedIn (Professional Profile)</option>
+                                <option value="github">GitHub (Technical Developer Readme/Bio)</option>
+                                <option value="upwork">Upwork (Freelance Profile Bio)</option>
+                                <option value="x">X / Twitter (Concise & Punchy)</option>
+                                <option value="instagram">Instagram (Creative Hub)</option>
+                                <option value="threads">Threads (Conversational/Casual)</option>
+                                <option value="youtube">YouTube (Channel About Section)</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">Desired Tonality</label>
+                        <div class="relative">
+                            <select id="tonality" name="tonality" class="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none cursor-pointer font-medium appearance-none text-sm pr-10">
+                                <option value="professional">Corporate Professional</option>
+                                <option value="branding">Personal Branding (Confident/Authority)</option>
+                                <option value="tech-witty">Tech-Witty & Smart</option>
+                                <option value="funny">Funny & Relatable</option>
+                                <option value="minimalist">Ultra Minimalist</option>
+                                <option value="bold">Bold & Disruptive</option>
+                                <option value="storyteller">Narrative Storyteller</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+                                <i class="fa-solid fa-chevron-down text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="mt-6">
-        <button id="generateBtn" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-3 group text-sm sm:text-base">
-            <span id="btnText">Generate Optimized Bio</span>
+                
+                <div class="mt-6">
+                    <button id="generateBtn" type="submit" class="w-full bg-slate-900 hover:bg-black text-white py-4 rounded-xl font-bold shadow-xl transition-all flex items-center justify-center gap-3 group text-sm sm:text-base">
+                        <span id="btnText">Generate Optimized Bio</span>
 
-            <div id="loadingSpinner" class="hidden flex items-center gap-1">
-                <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-                <div class="w-2 h-2 bg-blue-300 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-                <div class="w-2 h-2 bg-white rounded-full animate-bounce"></div>
-            </div>
+                        <div id="loadingSpinner" class="hidden flex items-center gap-1">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                            <div class="w-2 h-2 bg-blue-300 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                            <div class="w-2 h-2 bg-white rounded-full animate-bounce"></div>
+                        </div>
 
-            <i id="magicIcon" class="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i>
-        </button>
-    </div>
-</form>
+                        <i id="magicIcon" class="fa-solid fa-wand-magic-sparkles group-hover:rotate-12 transition-transform"></i>
+                    </button>
+                </div>
+            </form>
 
-            <div class="relative">
-                <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">The Magic Result</label>
+            <div class="relative group/result">
+                <div class="flex justify-between items-center mb-2">
+                    <label class="block text-[10px] sm:text-xs font-bold text-blue-900 uppercase tracking-wider">The Magic Result</label>
+                    
+                    <button id="copyBtn" class="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-blue-600 transition-all bg-slate-100 hover:bg-blue-50 px-2.5 py-1 rounded-lg border border-slate-200">
+                        <i id="copyIcon" class="fa-regular fa-copy"></i>
+                        <span id="copyText">Copy</span>
+                    </button>
+                </div>
                 <textarea id="resultTextarea" rows="4" readonly class="w-full px-4 py-4 bg-blue-50/50 border border-blue-100 rounded-2xl text-slate-700 focus:outline-none placeholder:text-slate-400 text-sm" 
                     placeholder="The AI will generate your content based on the platform and tone..."></textarea>
             </div>
@@ -102,4 +109,4 @@
     </div>
 <script type="module" src="script.js"></script>
 </body>
-                        </html>
+</html>
