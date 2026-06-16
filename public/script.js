@@ -20,7 +20,7 @@ addSkillBtn.onclick=()=>{
 }
 
 // When "Generate" is clicked, send user input to the webhook
-generateBtn.onclick=async(e)=>{
+formData.oonSubmit=async(e)=>{
     loadingSpinner.classList.remove("hidden") // show spinner
     e.preventDefault()
     const payload = {
