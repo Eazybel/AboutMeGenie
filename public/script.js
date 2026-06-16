@@ -1,6 +1,6 @@
 // Get references to form elements and buttons
-const addSkillBtn=document.getElementById("addSkillBtn")
-const skillContainer=document.getElementById("skillContainer")
+
+
 const skillType=document.getElementById("skillType")
 const generateBtn=document.getElementById("generateBtn")
 const platform=document.getElementById("platform")
@@ -12,12 +12,6 @@ const resultTextarea = document.getElementById("resultTextarea");
 const copyStatus = document.getElementById("copyStatus");
 const form=new FormData(formDatas)
 
-// When "Add Skill" is clicked, add the skill text into the container
-addSkillBtn.onclick=()=>{
-    skillContainer.insertAdjacentHTML("beforeend",`${skillType.value+","}`)
-    skillType.value=""
-    skillType.focus()
-}
 
 // When "Generate" is clicked, send user input to the webhook
 formDatas.oonSubmit=async(e)=>{
