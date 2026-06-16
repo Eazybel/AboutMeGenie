@@ -14,7 +14,7 @@ const form=new FormData(formDatas)
 
 
 // When "Generate" is clicked, send user input to the webhook
-formDatas.oonSubmit=async(e)=>{
+generateBtn.oonSubmit=async(e)=>{
     loadingSpinner.classList.remove("hidden") // show spinner
     e.preventDefault()
     const payload = {
