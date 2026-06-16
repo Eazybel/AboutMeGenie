@@ -31,7 +31,7 @@ generateBtn.onclick=async(e)=>{
     form.append("skills",skillContainer.innerText)
 
     // Send data to n8n webhook as JSON
-   await fetch("https://n8n-7hzw.onrender.com/webhook/08af61a3-6845-4f01-bfff-4d91a5b92dfb",{
+   await fetch("http://localhost:5678/webhook/13671a97-3c16-40b0-9737-871c9bace55c",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify(payload)
